@@ -1,0 +1,11 @@
+
+.navbar-brand img {
+  width: 200px; /* Ändere die Breite des Logos für Mobilgeräte */
+  height: auto; /* Auto-Höhe beibehalten */
+}
+@media (max-width: 768px) {
+  .navbar-brand img {
+    width: 150px; /* Ändere die Breite des Logos für Mobilgeräte */
+    height: auto; /* Auto-Höhe beibehalten */
+  }
+}

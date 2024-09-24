@@ -1,4 +1,3 @@
-
 // Mailer
 function sendMail(event) {
   event.preventDefault();
@@ -19,7 +18,7 @@ function sendMail(event) {
     });
 }
 
-// Coocibot
+// Cookie Banner
 document.addEventListener("DOMContentLoaded", function () {
   var cookieBanner = document.getElementById("cookie-banner");
   var acceptCookiesButton = document.getElementById("accept-cookies");
@@ -27,10 +26,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Check if cookies have been accepted or declined
   if (
-    !localStorage.getItem("cookiesAccepted") &&
-    !localStorage.getItem("cookiesDeclined")
+    localStorage.getItem("cookiesAccepted") !== "true" &&
+    localStorage.getItem("cookiesDeclined") !== "true"
   ) {
-    cookieBanner.style.display = "block";
+    cookieBanner.style.display = "flex"; // or "block" based on your CSS
+  } else {
+    cookieBanner.style.display = "none"; // Hide the banner if already accepted or declined
   }
 
   // Set cookiesAccepted flag in localStorage and hide the banner

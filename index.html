@@ -27,12 +27,12 @@
   <body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
       <div class="container">
-        <a class="navbar-brand" href="index.html">
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
           <img
             src="./img/dimitlogo.png"
             alt="Dimit Logo"
-            width="50"
-            height="50"
+            class="img-fluid rounded-circle"
+            style="max-width: 70px; height: 70px; object-fit: cover"
           />
         </a>
         <button
@@ -263,11 +263,11 @@
             >Datenschutzerklärung</a
           >.
         </p>
-        <div>
-          <button id="accept-cookies" class="btn btn-success btn-sm me-2">
+        <div class="d-flex">
+          <button id="accept-cookies" class="btn btn-success btn-sm">
             Akzeptieren
           </button>
-          <button id="decline-cookies" class="btn btn-danger btn-sm">
+          <button id="decline-cookies" class="btn btn-danger btn-sm ms-2">
             Ablehnen
           </button>
         </div>
@@ -294,7 +294,10 @@
                 </a>
               </li>
               <li>
-                <a href="https://www.linkedin.com/in/milos-dimitrijevic-35a552195/" class="text-white">
+                <a
+                  href="https://www.linkedin.com/in/milos-dimitrijevic-35a552195/"
+                  class="text-white"
+                >
                   <i class="bi bi-linkedin fs-4"></i> LinkedIn
                 </a>
               </li>

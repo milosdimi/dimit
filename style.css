@@ -442,6 +442,12 @@ footer a:hover {
 }
 
 
+a i.bi:hover {
+  color: #ffffff; 
+}
+
+
+
 @media (max-width: 768px) {
   .navbar-brand img {
     width: 80px;

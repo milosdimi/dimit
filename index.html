@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="de">
   <head>
+    <!-- Meta-Tags für Encoding, Viewport und SEO -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="msvalidate.01" content="7929209AC0A3FBA88B0092E90B2FAC53" />
@@ -10,9 +11,13 @@
     />
     <meta
       name="keywords"
-      content="Dienstleistungen, XYZ, Dimit, Webentwicklung, Serbien, Bootstrap"
+      content="Dienstleistungen, Webseite, Dimit, Webentwicklung, Serbien, Bootstrap"
     />
     <meta name="author" content="Dimit" />
+    <meta name="robots" content="index, follow" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- Open Graph Meta-Tags für Social Media-Sharing -->
     <meta
       property="og:title"
       content="Dimit | Professionelle Dienstleistungen"
@@ -24,11 +29,49 @@
     <meta property="og:image" content="./img/dimitlogo.png" />
     <meta property="og:url" content="https://www.dimit.cc" />
     <meta property="og:type" content="website" />
+
+    <!-- Twitter Cards (ähnlich wie Open Graph) -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Dimit | Professionelle Dienstleistungen"
+    />
+    <meta
+      name="twitter:description"
+      content="Erfahren Sie mehr über die hochwertigen Dienstleistungen von Dimit."
+    />
+    <meta name="twitter:image" content="./img/dimitlogo.png" />
+
+    <!-- Favicon und Web Icons -->
     <link rel="icon" type="image/x-icon" href="./img/dimitlogo.png" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./img/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./img/dimitlogo.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./img/dimitlogo.png"
+    />
+
+    <!-- Canonical URL -->
     <link rel="canonical" href="https://www.dimit.cc/" />
-    <link rel="preconnect" href="https://cdn.jsdelivr.net" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <meta name="robots" content="index, follow" />
+
+    <!-- Preconnect / Prefetch für Performance -->
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net" />
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="style.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
@@ -40,25 +83,34 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
+
+    <!-- Scripte -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
-    <script src="script.js"></script>
-    <title>Dimit | Home</title>
+    <script src="script.js" defer></script>
+
+    <!-- Titel der Seite -->
+    <title>Dimit | Professionelle Dienstleistungen</title>
   </head>
+
   <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container">
+        <!-- Logo-Bereich -->
         <a class="navbar-brand d-flex align-items-center" href="index.html">
           <img
             src="./img/dimitlogo.png"
             alt="Dimit Webseite Logo"
-            class="img-fluid rounded-circle"
-            style="max-width: 70px; height: 70px; object-fit: cover"
+            class="brand-logo"
           />
+          <span class="ms-2 fw-bold"></span>
+          <!-- Text neben dem Logo -->
         </a>
+
+        <!-- Toggler für Mobile-Ansicht -->
         <button
           class="navbar-toggler"
           type="button"
@@ -66,10 +118,12 @@
           data-bs-target="#navbarNav"
           aria-controls="navbarNav"
           aria-expanded="false"
-          aria-label="Toggle navigation"
+          aria-label="Navigation ein-/ausblenden"
         >
           <span class="navbar-toggler-icon"></span>
         </button>
+
+        <!-- Navigationslinks -->
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
@@ -83,17 +137,17 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#projects">
+              <a class="nav-link" href="#projects" aria-label="Projekte">
                 <i class="bi bi-briefcase-fill"></i> Projekte
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#skills">
+              <a class="nav-link" href="#skills" aria-label="Skills">
                 <i class="bi bi-tools"></i> Skills
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#contact">
+              <a class="nav-link" href="#contact" aria-label="Kontakt">
                 <i class="bi bi-envelope-fill"></i> Kontakt
               </a>
             </li>
@@ -102,38 +156,41 @@
       </div>
     </nav>
 
-    <section
-      id="about"
-      class="py-5 text-white"
-      style="background-color: #343a40"
-    >
+    <section id="about" class="py-5 text-white bg-dark">
       <div class="container">
         <div class="row align-items-center">
+          <!-- Bildabschnitt -->
           <div class="col-lg-5 text-center">
             <img
               src="./img/2.jpg"
               alt="Dimit"
-              class="img-fluid mb-4 shadow-lg"
-              style="
-                max-width: 75%;
-                border-radius: 20px;
-                filter: grayscale(20%) contrast(1.1);
-                transition: transform 0.3s ease, filter 0.3s ease;
-              "
+              class="about-image img-fluid mb-4 shadow-lg"
             />
           </div>
+
+          <!-- Textabschnitt -->
           <div class="col-lg-7">
             <h2 class="display-4">Hallo, ich bin Dimit!</h2>
             <p class="lead">
-              Leidenschaftlicher Webentwickler, der moderne Technologien wie
-              HTML, CSS, JavaScript und Bootstrap liebt. Ich entwickle
-              innovative Weblösungen, die Benutzerfreundlichkeit und Effizienz
-              miteinander verbinden.
+              Ich bin ein leidenschaftlicher Webentwickler mit umfassender
+              Erfahrung in der Erstellung moderner und leistungsstarker
+              Weblösungen. Mit einem breiten Spektrum an Technologien wie HTML,
+              CSS, JavaScript und Bootstrap setze ich innovative Projekte
+              effizient und nutzerfreundlich um.
             </p>
             <p>
-              Mit einem Fokus auf sauberes Design und durchdachte Strukturen
-              helfe ich dabei, digitale Ideen in die Realität umzusetzen. Lass
-              uns zusammen etwas Großartiges erschaffen!
+              Mein Ziel ist es, dir ein **Rundum-sorglos-Paket** zu bieten. Von
+              der **Webseitenerstellung** über **Hosting**,
+              **Domain-Management** und **Google-Suchoptimierung** bis hin zur
+              Entwicklung von **Apps** und **Web-Apps** – ich begleite dich von
+              Anfang bis Ende. Auch im Bereich **IPTV**,
+              **Social-Media-Marketing** und der Gestaltung von **Werbung und
+              Posts** bringe ich fundierte Kenntnisse mit.
+            </p>
+            <p>
+              Lass uns zusammen digitale Projekte realisieren, die modern,
+              effektiv und zukunftssicher sind. Gemeinsam verwandeln wir deine
+              Ideen in großartige Erlebnisse!
             </p>
             <a href="#contact" class="btn btn-primary btn-lg"
               >Kontakt aufnehmen</a
@@ -145,75 +202,230 @@
 
     <section id="projects" class="py-5">
       <div class="container">
-        <h2 class="text-center mb-4">Projekte</h2>
+        <h2 class="text-center mb-5 section-title">Projekte</h2>
         <div class="row">
+          <!-- Projekt 1 -->
           <div class="col-md-4">
-            <div class="card text-center">
-              <div class="card-body">
-                <i class="bi bi-laptop display-1 mb-4"></i>
-                <h5 class="card-title">Projekt 1</h5>
-                <p class="card-text">Kurze Beschreibung des Projekts.</p>
-                <a href="#" class="btn btn-primary">Mehr erfahren</a>
+            <div class="project-card-container">
+              <div class="project-card">
+                <!-- Vorderseite der Karte -->
+                <div class="project-card-front">
+                  <div class="card-body text-center">
+                    <i class="bi bi-laptop display-1 project-icon"></i>
+                    <h5 class="card-title">Website für lokale Unternehmen</h5>
+                    <p class="card-text">
+                      Entwicklung benutzerfreundlicher Webseiten für lokale
+                      Unternehmen.
+                    </p>
+                    <button class="btn btn-primary flip-card-btn">
+                      Mehr erfahren
+                    </button>
+                  </div>
+                </div>
+                <!-- Rückseite der Karte -->
+                <div class="project-card-back">
+                  <div class="card-body">
+                    <h5 class="card-title">Projekte</h5>
+                    <ul class="project-list">
+                      <li>
+                        <a
+                          href="https://mixa-krusevac.com"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          >mixa-krusevac.com</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="https://carclean.cc"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          >carclean.cc</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="https://ku-le.cc"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          >ku-le.cc</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="https://schwarzdecker.cc"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          >schwarzdecker.cc</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="https://test.dimit.cc"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          >test.dimit.cc</a
+                        >
+                      </li>
+                    </ul>
+                    <button class="btn btn-secondary flip-card-btn">
+                      Zurück
+                    </button>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
+
+          <!-- Projekt 2 -->
           <div class="col-md-4">
-            <div class="card text-center">
-              <div class="card-body">
-                <i class="bi bi-phone display-1 mb-4"></i>
-                <h5 class="card-title">Projekt 2</h5>
-                <p class="card-text">Kurze Beschreibung des Projekts.</p>
-                <a href="#" class="btn btn-primary">Mehr erfahren</a>
+            <div class="project-card-container">
+              <div class="project-card">
+                <!-- Vorderseite der Karte -->
+                <div class="project-card-front">
+                  <div class="card-body text-center">
+                    <i class="bi bi-controller display-1 project-icon"></i>
+                    <!-- Game Icon -->
+                    <h5 class="card-title">Kleine Java-Spiele</h5>
+                    <!-- Neuer Titel -->
+                    <p class="card-text">
+                      Entwicklung von interaktiven und unterhaltsamen kleinen
+                      Java-Spielen, die Spaß und Lernen vereinen.
+                    </p>
+                    <button class="btn btn-primary flip-card-btn">
+                      Mehr erfahren
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Rückseite der Karte -->
+                <div class="project-card-back">
+                  <div class="card-body">
+                    <h5 class="card-title">Projekte</h5>
+                    <ul class="project-list">
+                      <li>
+                        <a
+                          href="https://poke.dimit.cc"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          poke.dimit.cc
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="https://game.dimit.cc"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          game.dimit.cc
+                        </a>
+                      </li>
+                    </ul>
+                    <button class="btn btn-secondary flip-card-btn">
+                      Zurück
+                    </button>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
+
+          <!-- Projekt 3 -->
           <div class="col-md-4">
-            <div class="card text-center">
-              <div class="card-body">
-                <i class="bi bi-code-slash display-1 mb-4"></i>
-                <h5 class="card-title">Projekt 3</h5>
-                <p class="card-text">Kurze Beschreibung des Projekts.</p>
-                <a href="#" class="btn btn-primary">Mehr erfahren</a>
+            <div class="project-card-container">
+              <div class="project-card">
+                <!-- Vorderseite der Karte -->
+                <div class="project-card-front">
+                  <div class="card-body text-center">
+                    <i class="bi bi-collection display-1 project-icon"></i>
+                    <!-- Neues Icon -->
+                    <h5 class="card-title">Weitere Projekte</h5>
+                    <!-- Neuer Titel -->
+                    <p class="card-text">
+                      Eine Sammlung von spannenden Projekten, die verschiedene
+                      Technologien und kreative Ansätze kombinieren.
+                    </p>
+                    <button class="btn btn-primary flip-card-btn">
+                      Mehr erfahren
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Rückseite der Karte -->
+                <div class="project-card-back">
+                  <div class="card-body">
+                    <h5 class="card-title">Weitere Projekte</h5>
+                    <ul class="project-list">
+                      <li>
+                        <a
+                          href="https://github.com/milosdimi"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          Weitere Projekte anzeigen
+                        </a>
+                      </li>
+                    </ul>
+                    <button class="btn btn-secondary flip-card-btn">
+                      Zurück
+                    </button>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
+
+          <!-- Weitere Projekte kannst du hier hinzufügen -->
         </div>
       </div>
     </section>
 
     <section id="skills" class="py-5 bg-light">
       <div class="container">
-        <h2 class="text-center mb-4">Meine Fähigkeiten</h2>
+        <h2 class="text-center mb-5 section-title">Meine Fähigkeiten</h2>
+
         <div class="row">
+          <!-- Spalte 1 -->
           <div class="col-md-6">
             <ul class="list-group">
-              <li class="list-group-item">
-                <i class="bi bi-code-slash me-2"></i> HTML
+              <li class="list-group-item skill-item">
+                <i class="bi bi-code-slash me-3 skill-icon"></i>
+                <span class="skill-title">HTML</span>
               </li>
-              <li class="list-group-item">
-                <i class="bi bi-palette me-2"></i> CSS
+              <li class="list-group-item skill-item">
+                <i class="bi bi-palette me-3 skill-icon"></i>
+                <span class="skill-title">CSS</span>
               </li>
-              <li class="list-group-item">
-                <i class="bi bi-file-code me-2"></i> JavaScript
+              <li class="list-group-item skill-item">
+                <i class="bi bi-file-code me-3 skill-icon"></i>
+                <span class="skill-title">JavaScript</span>
               </li>
-              <li class="list-group-item">
-                <i class="bi bi-terminal-dash me-2"></i> C#
+              <li class="list-group-item skill-item">
+                <i class="bi bi-terminal-dash me-3 skill-icon"></i>
+                <span class="skill-title">C#</span>
               </li>
             </ul>
           </div>
+
+          <!-- Spalte 2 -->
           <div class="col-md-6">
             <ul class="list-group">
-              <li class="list-group-item">
-                <i class="bi bi-react me-2"></i> React
+              <li class="list-group-item skill-item">
+                <i class="bi bi-terminal me-3 skill-icon"></i>
+                <span class="skill-title">Python</span>
               </li>
-              <li class="list-group-item">
-                <i class="bi bi-node-plus me-2"></i> Node.js
+              <li class="list-group-item skill-item">
+                <i class="bi bi-node-plus me-3 skill-icon"></i>
+                <span class="skill-title">Node.js</span>
               </li>
-              <li class="list-group-item">
-                <i class="bi bi-git me-2"></i> Git
+              <li class="list-group-item skill-item">
+                <i class="bi bi-git me-3 skill-icon"></i>
+                <span class="skill-title">Git</span>
               </li>
-              <li class="list-group-item">
-                <i class="bi bi-plug me-2"></i> API-Integration
+              <li class="list-group-item skill-item">
+                <i class="bi bi-plug me-3 skill-icon"></i>
+                <span class="skill-title">API-Integration</span>
               </li>
             </ul>
           </div>
@@ -221,11 +433,13 @@
       </div>
     </section>
 
-    <section id="contact" class="py-5">
+    <section id="contact" class="py-5 bg-light">
       <div class="container">
-        <h2 class="text-center mb-4">Kontakt</h2>
-        <form onsubmit="sendMail(event)">
-          <div class="mb-3">
+        <h2 class="text-center mb-5 section-title">Kontakt</h2>
+
+        <form onsubmit="sendMail(event)" class="contact-form">
+          <!-- Name Eingabefeld -->
+          <div class="mb-4">
             <label for="name" class="form-label">Name</label>
             <div class="input-group">
               <span class="input-group-text">
@@ -241,7 +455,9 @@
               />
             </div>
           </div>
-          <div class="mb-3">
+
+          <!-- E-Mail Eingabefeld -->
+          <div class="mb-4">
             <label for="email" class="form-label">E-Mail</label>
             <div class="input-group">
               <span class="input-group-text">
@@ -257,7 +473,9 @@
               />
             </div>
           </div>
-          <div class="mb-3">
+
+          <!-- Nachricht Eingabefeld -->
+          <div class="mb-4">
             <label for="message" class="form-label">Nachricht</label>
             <div class="input-group">
               <span class="input-group-text">
@@ -267,14 +485,16 @@
                 class="form-control"
                 id="message"
                 name="message"
-                rows="4"
+                rows="5"
                 placeholder="Deine Nachricht"
                 required
               ></textarea>
             </div>
           </div>
-          <button type="submit" class="btn btn-primary">
-            <i class="bi bi-send-fill me-1"></i> Senden
+
+          <!-- Senden-Button -->
+          <button type="submit" class="btn btn-primary btn-lg w-100">
+            <i class="bi bi-send-fill me-2"></i> Senden
           </button>
         </form>
       </div>
@@ -303,71 +523,91 @@
       </div>
     </div>
 
-    <footer class="bg-dark text-white mt-5 p-4 text-center">
+    <footer class="bg-dark text-white mt-5 p-5">
       <div class="container">
         <div class="row">
-          <div class="col-md-4">
-            <h5>Über mich</h5>
+          <!-- Logo Bereich -->
+          <div class="col-md-3 text-center text-md-start mb-4">
+            <img
+              src="./img/dimitlogo.png"
+              alt="Dimit Logo"
+              class="footer-logo mb-3"
+            />
             <p>
               Ich bin Dimit, ein leidenschaftlicher Entwickler mit Fokus auf
               moderne Webtechnologien.
             </p>
           </div>
 
-          <div class="col-md-4">
+          <!-- Kontaktbereich -->
+          <div class="col-md-3">
             <h5>Kontakt</h5>
             <ul class="list-unstyled">
               <li>
                 <a href="mailto:dm@dimit.at" class="text-white">
-                  <i class="bi bi-envelope-fill fs-4"></i> E-Mail
+                  <i class="bi bi-envelope-fill fs-5"></i> E-Mail
                 </a>
               </li>
               <li>
                 <a
                   href="https://www.linkedin.com/in/milos-dimitrijevic-35a552195/"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   class="text-white"
                 >
-                  <i class="bi bi-linkedin fs-4"></i> LinkedIn
+                  <i class="bi bi-linkedin fs-5"></i> LinkedIn
                 </a>
               </li>
               <li>
-                <a href="https://github.com/milosdimi" class="text-white">
-                  <i class="bi bi-github fs-4"></i> GitHub
+                <a
+                  href="https://github.com/milosdimi"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-white"
+                >
+                  <i class="bi bi-github fs-5"></i> GitHub
                 </a>
               </li>
             </ul>
           </div>
 
-          <div class="col-md-4">
+          <!-- Folge mir Bereich -->
+          <div class="col-md-3 d-flex flex-column align-items-center">
             <h5>Folge mir</h5>
-            <a href="https://x.com/Dimitdev" class="text-white me-2">
-              <i class="bi bi-twitter fs-1"></i>
-              <!-- Größere Icons -->
-            </a>
-            <a
-              href="https://www.instagram.com/dimit.it/"
-              class="text-white me-2"
-            >
-              <i class="bi bi-instagram fs-1"></i>
-              <!-- Größere Icons -->
-            </a>
-            <a
-              href="https://www.facebook.com/profile.php?id=61557717354333"
-              class="text-white me-2"
-            >
-              <i class="bi bi-facebook fs-1"></i>
-              <!-- Größere Icons -->
-            </a>
+            <div class="social-icons d-flex justify-content-center">
+              <a href="https://x.com/Dimitdev" target="_blank" rel="noopener noreferrer">
+                <i class="bi bi-twitter fs-3"></i>
+              </a>
+              <a href="https://www.instagram.com/dimit.it/" target="_blank" rel="noopener noreferrer">
+                <i class="bi bi-instagram fs-3"></i>
+              </a>
+              <a href="https://www.facebook.com/profile.php?id=61557717354333" target="_blank" rel="noopener noreferrer">
+                <i class="bi bi-facebook fs-3"></i>
+              </a>
+            </div>
           </div>
+          
+          
 
-          <div class="col-md-4">
+          <!-- Links Bereich -->
+          <div class="col-md-3">
             <h5>Links</h5>
             <ul class="list-unstyled">
               <li>
-                <a href="/impressum.html" class="text-white me-2">Impressum</a>
+                <a
+                  href="/impressum.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-white"
+                  >Impressum</a
+                >
               </li>
               <li>
-                <a href="/datenschutzerklaerung.html" class="text-white me-2"
+                <a
+                  href="/datenschutzerklaerung.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-white"
                   >Datenschutz</a
                 >
               </li>
@@ -375,8 +615,9 @@
           </div>
         </div>
 
-        <div class="row mt-3">
-          <div class="col">
+        <!-- Copyright Bereich -->
+        <div class="row mt-4">
+          <div class="col text-center">
             <p>&copy; 2024 Dimit. Alle Rechte vorbehalten.</p>
           </div>
         </div>

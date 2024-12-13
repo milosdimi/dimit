@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="de">
   <head>
+    <!-- Meta-Tags für Encoding, Viewport und SEO -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="msvalidate.01" content="7929209AC0A3FBA88B0092E90B2FAC53" />
@@ -10,9 +11,13 @@
     />
     <meta
       name="keywords"
-      content="Dienstleistungen, XYZ, Dimit, Webentwicklung, Serbien, Bootstrap"
+      content="Dienstleistungen, Webseite, Dimit, Webentwicklung, Serbien, Bootstrap"
     />
     <meta name="author" content="Dimit" />
+    <meta name="robots" content="index, follow" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- Open Graph Meta-Tags für Social Media-Sharing -->
     <meta
       property="og:title"
       content="Dimit | Professionelle Dienstleistungen"
@@ -24,11 +29,49 @@
     <meta property="og:image" content="./img/dimitlogo.png" />
     <meta property="og:url" content="https://www.dimit.cc" />
     <meta property="og:type" content="website" />
+
+    <!-- Twitter Cards (ähnlich wie Open Graph) -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Dimit | Professionelle Dienstleistungen"
+    />
+    <meta
+      name="twitter:description"
+      content="Erfahren Sie mehr über die hochwertigen Dienstleistungen von Dimit."
+    />
+    <meta name="twitter:image" content="./img/dimitlogo.png" />
+
+    <!-- Favicon und Web Icons -->
     <link rel="icon" type="image/x-icon" href="./img/dimitlogo.png" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./img/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./img/dimitlogo.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./img/dimitlogo.png"
+    />
+
+    <!-- Canonical URL -->
     <link rel="canonical" href="https://www.dimit.cc/" />
-    <link rel="preconnect" href="https://cdn.jsdelivr.net" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <meta name="robots" content="index, follow" />
+
+    <!-- Preconnect / Prefetch für Performance -->
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net" />
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="style.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
@@ -40,25 +83,33 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
+
+    <!-- Scripte -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
+
+    <!-- Titel der Seite -->
     <title>Dimit | Datenschutz</title>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container">
-        <a class="navbar-brand" href="index.html">
+        <!-- Logo-Bereich -->
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
           <img
             src="./img/dimitlogo.png"
-            alt="Dimit Logo"
-            width="50"
-            height="50"
+            alt="Dimit Webseite Logo"
+            class="brand-logo"
           />
+          <span class="ms-2 fw-bold"></span>
+          <!-- Text neben dem Logo -->
         </a>
+
+        <!-- Toggler für Mobile-Ansicht -->
         <button
           class="navbar-toggler"
           type="button"
@@ -66,29 +117,36 @@
           data-bs-target="#navbarNav"
           aria-controls="navbarNav"
           aria-expanded="false"
-          aria-label="Toggle navigation"
+          aria-label="Navigation ein-/ausblenden"
         >
           <span class="navbar-toggler-icon"></span>
         </button>
+
+        <!-- Navigationslinks -->
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#about">
+              <a
+                class="nav-link active"
+                aria-current="page"
+                href="index.html"
+                aria-label="Über mich"
+              >
                 <i class="bi bi-person-fill"></i> Über mich
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#projects">
+              <a class="nav-link" href="index.html" aria-label="Projekte">
                 <i class="bi bi-briefcase-fill"></i> Projekte
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#skills">
+              <a class="nav-link" href="index.html" aria-label="Skills">
                 <i class="bi bi-tools"></i> Skills
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#contact">
+              <a class="nav-link" href="index.html" aria-label="Kontakt">
                 <i class="bi bi-envelope-fill"></i> Kontakt
               </a>
             </li>
@@ -217,68 +275,91 @@
       </div>
     </div>
 
-    <footer class="bg-dark text-white mt-5 p-4 text-center">
+    <footer class="bg-dark text-white mt-5 p-5">
       <div class="container">
         <div class="row">
-          <div class="col-md-4">
-            <h5>Über mich</h5>
+          <!-- Logo Bereich -->
+          <div class="col-md-3 text-center text-md-start mb-4">
+            <img
+              src="./img/dimitlogo.png"
+              alt="Dimit Logo"
+              class="footer-logo mb-3"
+            />
             <p>
               Ich bin Dimit, ein leidenschaftlicher Entwickler mit Fokus auf
               moderne Webtechnologien.
             </p>
           </div>
 
-          <div class="col-md-4">
+          <!-- Kontaktbereich -->
+          <div class="col-md-3">
             <h5>Kontakt</h5>
             <ul class="list-unstyled">
               <li>
                 <a href="mailto:dm@dimit.at" class="text-white">
-                  <i class="bi bi-envelope-fill fs-4"></i> E-Mail
+                  <i class="bi bi-envelope-fill fs-5"></i> E-Mail
                 </a>
               </li>
               <li>
-                <a href="https://www.linkedin.com/in/milos-dimitrijevic-35a552195/" class="text-white">
-                  <i class="bi bi-linkedin fs-4"></i> LinkedIn
+                <a
+                  href="https://www.linkedin.com/in/milos-dimitrijevic-35a552195/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-white"
+                >
+                  <i class="bi bi-linkedin fs-5"></i> LinkedIn
                 </a>
               </li>
               <li>
-                <a href="https://github.com/milosdimi" class="text-white">
-                  <i class="bi bi-github fs-4"></i> GitHub
+                <a
+                  href="https://github.com/milosdimi"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-white"
+                >
+                  <i class="bi bi-github fs-5"></i> GitHub
                 </a>
               </li>
             </ul>
           </div>
 
-          <div class="col-md-4">
+          <!-- Folge mir Bereich -->
+          <div class="col-md-3 d-flex flex-column align-items-center">
             <h5>Folge mir</h5>
-            <a href="https://x.com/Dimitdev" class="text-white me-2">
-              <i class="bi bi-twitter fs-1"></i>
-              <!-- Größere Icons -->
-            </a>
-            <a
-              href="https://www.instagram.com/dimit.it/"
-              class="text-white me-2"
-            >
-              <i class="bi bi-instagram fs-1"></i>
-              <!-- Größere Icons -->
-            </a>
-            <a
-              href="https://www.facebook.com/profile.php?id=61557717354333"
-              class="text-white me-2"
-            >
-              <i class="bi bi-facebook fs-1"></i>
-              <!-- Größere Icons -->
-            </a>
+            <div class="social-icons d-flex justify-content-center">
+              <a href="https://x.com/Dimitdev" target="_blank" rel="noopener noreferrer">
+                <i class="bi bi-twitter fs-3"></i>
+              </a>
+              <a href="https://www.instagram.com/dimit.it/" target="_blank" rel="noopener noreferrer">
+                <i class="bi bi-instagram fs-3"></i>
+              </a>
+              <a href="https://www.facebook.com/profile.php?id=61557717354333" target="_blank" rel="noopener noreferrer">
+                <i class="bi bi-facebook fs-3"></i>
+              </a>
+            </div>
           </div>
+          
+          
 
-          <div class="col-md-4">
+          <!-- Links Bereich -->
+          <div class="col-md-3">
             <h5>Links</h5>
             <ul class="list-unstyled">
               <li>
-                <a href="/impressum.html" class="text-white me-2">Impressum</a>
+                <a
+                  href="/impressum.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-white"
+                  >Impressum</a
+                >
               </li>
               <li>
-                <a href="/datenschutzerklaerung.html" class="text-white me-2"
+                <a
+                  href="/datenschutzerklaerung.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-white"
                   >Datenschutz</a
                 >
               </li>
@@ -286,8 +367,9 @@
           </div>
         </div>
 
-        <div class="row mt-3">
-          <div class="col">
+        <!-- Copyright Bereich -->
+        <div class="row mt-4">
+          <div class="col text-center">
             <p>&copy; 2024 Dimit. Alle Rechte vorbehalten.</p>
           </div>
         </div>

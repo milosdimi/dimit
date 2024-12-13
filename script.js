@@ -47,3 +47,45 @@ document.addEventListener("DOMContentLoaded", function () {
     // Optionally: Redirect to a page or take action on decline
   });
 });
+
+// Automatisches Schließen der Navigation bei Klick auf einen Link (für Mobile)
+document.querySelectorAll(".nav-link").forEach((link) => {
+  link.addEventListener("click", () => {
+    const navCollapse = document.querySelector(".navbar-collapse");
+    if (navCollapse.classList.contains("show")) {
+      navCollapse.classList.remove("show");
+    }
+  });
+});
+
+// Navigation bei Scrollen ändern (Transparent zu Dunkel)
+window.addEventListener("scroll", () => {
+  const navbar = document.querySelector(".navbar");
+  if (window.scrollY > 50) {
+    navbar.classList.add("scrolled");
+  } else {
+    navbar.classList.remove("scrolled");
+  }
+});
+
+// Scroll-Animation für die About-Section
+const aboutSection = document.querySelector("#about");
+const aboutImage = document.querySelector(".about-image");
+
+window.addEventListener("scroll", () => {
+  const sectionPos = aboutSection.getBoundingClientRect().top;
+  const windowHeight = window.innerHeight;
+
+  if (sectionPos < windowHeight - 100) {
+    aboutImage.classList.add("animate");
+  }
+});
+
+// Flip-Karten Logik
+document.querySelectorAll('.flip-card-btn').forEach(button => {
+  button.addEventListener('click', () => {
+    const projectCard = button.closest('.project-card');
+    projectCard.classList.toggle('flip');
+  });
+});
+
